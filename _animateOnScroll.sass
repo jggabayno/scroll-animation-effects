@@ -1,0 +1,44 @@
+@keyframes slideInLeft
+  0%
+    transform: translateX(-200px)
+  100%
+    transform: translateX(0)
+    opacity: 1
+
+@keyframes slideInRight
+  0%
+    transform: translateX(300px)
+  100%
+    transform: translateX(0)
+    opacity: 1
+
+@keyframes fadeInBottom
+  0%
+    transform: translateY(100px)
+  100%
+    transform: translateY(0)
+    opacity: 1
+
+@keyframes fadeIn
+  0%
+  100%
+    opacity: 1
+
+*[scroll-animate]
+  opacity: 0
+  transition: opacity .3s
+
+*[scroll-animate*='scrolled']
+  opacity: 1
+
+  &[scroll-animate*='fadeIn']:not([scroll-animate*='fadeInBottom'])
+    animation: fadeIn 1s ease-in-out both
+
+  &[scroll-animate*='slideInRight']
+    animation: slideInRight 1s cubic-bezier(0.6, -0.28, 0.74, 0.05) both
+
+  &[scroll-animate*='slideInLeft']
+    animation: slideInLeft 1s cubic-bezier(0.6, -0.28, 0.74, 0.05) both
+
+  &[scroll-animate*='fadeInBottom']
+    animation: fadeInBottom 1s ease-in-out both
