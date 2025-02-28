@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation</title>
+    <link rel="stylesheet" href="./animateOnScroll.css">
+    <style>
+        .spacer  {
+            height: 110vh;
+        }
+
+        [scroll-animate] {
+            background-color: #f1f1f1;
+            width: fit-content;
+            padding: .4rem;
+            font-family: sans-serif;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Scroll down to see animations</h1>
+
+    <div class="spacer"></div>
+    <div scroll-animate="fadeIn .3s">Fade In</div>
+    <div class="spacer"></div>
+    <div scroll-animate="fadeInBottom .8s">Fade In Bottom</div>
+    <div class="spacer"></div>
+    <div scroll-animate="slideInLeft .8s">Slide In Left</div>
+    <div class="spacer"></div>
+    <div scroll-animate="slideInRight .8s animateOnce">Slide In Right</div>
+    <script src="./animateOnScroll.js"></script>
+</body>
+</html>
